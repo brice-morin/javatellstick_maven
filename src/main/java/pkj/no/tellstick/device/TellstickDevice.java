@@ -92,15 +92,15 @@ public class TellstickDevice implements Comparable<TellstickDevice>{
 		
 		// Get name
 		this.name = JNA.CLibrary.INSTANCE.tdGetName(deviceId);
-		JNA.CLibrary.INSTANCE.tdReleaseString(name);
+		//JNA.CLibrary.INSTANCE.tdReleaseString(name);
 
 		// Get model
 		this.model = JNA.CLibrary.INSTANCE.tdGetModel(deviceId);
-		JNA.CLibrary.INSTANCE.tdReleaseString(model);
+		//JNA.CLibrary.INSTANCE.tdReleaseString(model);
 		
 		// Get protocol
 		this.protocol = JNA.CLibrary.INSTANCE.tdGetProtocol(deviceId);
-		JNA.CLibrary.INSTANCE.tdReleaseString(protocol);
+		//JNA.CLibrary.INSTANCE.tdReleaseString(protocol);
 		
 		// Get last status ( EMULATED 2 way communication ) Works with TS DUO
 		this.status = JNA.CLibrary.INSTANCE.tdLastSentCommand(deviceId, getSupportedMethods());
